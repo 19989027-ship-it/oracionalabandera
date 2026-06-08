@@ -1,0 +1,56 @@
+using System;
+
+namespace OracionALaBandera
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Configurar los colores de la consola con los colores de la bandera
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Clear();
+
+            // Título
+            Console.WriteLine("==================================================");
+            Console.WriteLine("          ORACIÓN A LA BANDERA DE EL SALVADOR     ");
+            Console.WriteLine("==================================================2wea \n");
+
+            // Texto de la oración
+            string[] oracion = {
+                "Dios te salve, Patria Sagrada,",
+                "en tu seno hemos nacido y amado;",
+                "eres el aire que respiramos,",
+                "la tierra que nos sustenta,",
+                "la familia que nos ama,",
+                "la libertad que nos defiende,",
+                "la religión que nos consuela.",
+                "",
+                "Tú tienes nuestros hogares queridos,",
+                "fértiles campiñas, ríos majestuosos,",
+                "soberbios volcanes, apacibles lagos,",
+                "cielos de púrpura y oro.",
+                "",
+                "En tus altares hemos jurado",
+                "llenar tu lábaro de soberano honor,",
+                "serte fieles, encontrar nuestra dicha en tu amor,",
+                "y defender tu sagrado suelo",
+                "hasta nuestro último suspiro.",
+                "",
+                "¡Dios te salve, Patria Sagrada!",
+                "¡Dios te salve, El Salvador!"
+            };
+
+            // Imprimir la oración línea por línea con una pausa dramática
+            foreach (string linea in oracion)
+            {
+                Console.WriteLine($"  {linea}");
+                System.Threading.Thread.Sleep(400); // Pausa de 400 milisegundos entre líneas
+            }
+
+            Console.WriteLine("\n==================================================");
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+        }
+    }
+}
